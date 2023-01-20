@@ -1,18 +1,28 @@
 import { Link } from "react-router-dom";
-import { Welcome } from "../../components/sectionInitial";
-import { Container, DivWelcome } from "./style";
-
+import { Container, DivContainer, DivDescription, DivWelcome } from "./style";
 export const InitialPage = () => {
   return (
     <Container>
-      <Welcome/>
-      <DivWelcome>
-        <h1>Bem-vindo ao meu portfólio.</h1>
-        <h2>Clique em Iniciar !</h2>
-        <Link to={"/home"}>
-          <button>Iniciar</button>
-        </Link>
-      </DivWelcome>
+      <nav>
+        <h2>Port<span>fólio</span></h2>
+        <p>Seja bem vindo</p>
+      </nav>
+      <DivContainer>
+        <DivDescription>
+          <p>Ola, me chamo </p>
+          <h1>Lucas Dantas</h1>
+          <p>
+            sou <span>Desenvolvedor Front End</span>
+          </p>
+        </DivDescription>
+        <DivWelcome>
+          <h2>Bem vindo ao meu portfólio !</h2>
+          <p>Clique em íniciar</p>
+          <Link to={"/home"}>
+            <button>Iniciar</button>
+          </Link>
+        </DivWelcome>
+      </DivContainer>
     </Container>
   );
 };

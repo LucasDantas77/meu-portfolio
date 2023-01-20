@@ -1,28 +1,89 @@
 import styled, { keyframes } from "styled-components";
 
-const AnimatedDegrade = keyframes`
-    0% {
-      background-position-y: 0%;
-    }
-    100% {
-      background-position-y: 100%;
-    }
-    `;
+const Typing = keyframes`
+100%{
+left:100%;
+margin:0 -35px 0 35px
+}
+`;
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to top, #142e85, #1a65b9, #20abd8);
+  background-image: linear-gradient(to top, #575755, #000, #212724);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 30px 0;
+    align-items: center;
+    background-color: #151515;
+
+    nav:hover {
+      background-color: #1a65b9;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    span {
+      color: #1a65b9;
+      font-size: 18px;
+    }
+  }
+`;
+
+export const DivContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 80px;
   align-items: center;
-  gap: 25px;
-  background-size: 500% 100%;
-  animation: ${AnimatedDegrade} 5s infinite alternate;
+  margin-top: 100px;
 
   @media (min-width: 768px) {
     flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+  }
+`;
+
+export const DivDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+
+  h1 {
+    color: #fff;
+  }
+  p {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  span {
+    position: relative;
+    color: #1a65b9;
+  }
+
+  span:after {
+    content: "";
+    animation: ${Typing} 2s steps(10) infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: #000;
+    border-left: 2px solid #1a65b9;
   }
 `;
 
@@ -31,24 +92,33 @@ export const DivWelcome = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  width: 80%;
-  max-width: 350px;
-
-  h1 {
-    font-size: 20px;
-    width: 100%;
-    color: #fff;
-    font-weight: 400;
-  }
+  gap: 0.8rem;
+  background-color: #151515;
+  height: 200px;
+  padding: 10px;
+  border-bottom: 1px solid transparent;
+  border-radius: 10px;
 
   h2 {
-    color: #fff;
+    width: 100%;
     font-size: 20px;
+    color: #fff;
+  }
+
+  h2:hover {
+    color: #1a65b9;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  p:hover {
+    color: #1a65b9;
   }
 
   button {
-    width: 100%;
+    width: 130px;
     border-radius: 8px;
     border: none;
     background-color: #1a65b9;
@@ -58,11 +128,5 @@ export const DivWelcome = styled.div`
 
   button:hover {
     color: #142e85;
-  }
-
-  @media (min-width: 768px) {
-    h1 {
-      margin-left: 90px;
-    }
   }
 `;
