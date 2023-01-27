@@ -8,6 +8,7 @@ background-color:  #1a65b9;
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 
 
 `
@@ -15,8 +16,8 @@ align-items: center;
 export const DivContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
-  max-width: 300px;
+  width: 90%;
+  max-width: 500px;
   border: 1px solid #baffeb;
   border-radius: 10px;
   padding: 10px;

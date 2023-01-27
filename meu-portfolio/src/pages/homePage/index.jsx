@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MainPage } from "../../components/mainPage";
+import { Projects } from "../../components/projects";
 import { Container } from "./style";
 
 export const HomePage = () => {
@@ -14,6 +15,7 @@ export const HomePage = () => {
         </Link>
       </nav>
       <MainPage />
+      <Projects/>
     </Container>
   );
 };

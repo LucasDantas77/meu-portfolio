@@ -7,6 +7,7 @@ import {
 } from "./style";
 import Linkedin from "../../assets/logo-linkedin.png";
 import GitHub from "../../assets/git-logo.png";
+import Vercel from "../../assets/log-vercel.jpg";
 
 export const MainPage = () => {
   return (
@@ -33,6 +34,12 @@ export const MainPage = () => {
             <img src={GitHub} alt="logo GitHub" />
             <button>
               <a href="https://github.com/LucasDantas77">Acessar GitHub</a>
+            </button>
+          </DivBtns>
+          <DivBtns>
+            <img src={Vercel} alt="logo vercel" />
+            <button>
+              <a href="https:vercel.com/lucasdantas77">Acessar Vercel</a>
             </button>
           </DivBtns>
         </DivMainBtns>

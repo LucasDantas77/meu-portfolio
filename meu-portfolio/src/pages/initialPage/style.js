@@ -23,10 +23,6 @@ export const Container = styled.div`
     align-items: center;
     background-color: #151515;
 
-    nav:hover {
-      background-color: #1a65b9;
-    }
-
     p {
       color: #fff;
     }

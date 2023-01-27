@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   nav {
@@ -17,12 +17,16 @@ export const Container = styled.div`
     }
 
     button{
-        background-color: #575755;
+        background-color: #1a65b9;
         color: #fff;
         padding: 5px;
         font-size: 12px;
         border: none;
         border-radius: 10px;
+    }
+
+    button:hover{
+        color:#142e85;
     }
 
     h2 {
